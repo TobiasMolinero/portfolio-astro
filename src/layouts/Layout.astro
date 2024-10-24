@@ -1,0 +1,60 @@
+---
+import Header from "../components/Header.astro";
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+	</head>
+	<body class="relative">
+		<div class="absolute top-0 bottom-0 z-[-2] h-screen w-full bg-slate-950 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px)linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradien(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
+		</div>
+		<!-- header -->
+		<Header />
+		<slot />
+	</body>
+</html>
+<style is:global>
+	@font-face {
+		font-family: 'Onest';
+		src: url('/public/onest/Onest-Regular.ttf');
+		font-weight: 400;
+	}
+
+	@font-face {
+		font-family: 'Onest';
+		src: url('/public/onest/Onest-Medium.ttf');
+		font-weight: 500;
+	}
+
+	@font-face {
+		font-family: 'Onest';
+		src: url('/public/onest/Onest-SemiBold.ttf');
+		font-weight: 600;
+	}
+	
+	@font-face {
+		font-family: 'Onest';
+		src: url('/public/onest/Onest-Bold.ttf');
+		font-weight: 700;
+	}
+
+	html{
+		font-family: 'Onest', system-ui, sans-serif;
+	}
+
+	body{
+
+		color: rgba(17, 17, 17, 0.9);
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+			overscroll-behavior: none;
+	}
+</style>
