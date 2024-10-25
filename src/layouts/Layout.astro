@@ -12,36 +12,40 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<title>{title}</title>
 	</head>
-	<body class="relative">
-		<div class="absolute top-0 bottom-0 z-[-2] h-screen w-full bg-slate-950 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px)linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradien(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
+	<body>
+		<div>
+			<div class="bg-slate-950 fixed top-0 left-0 -z-10 h-full w-full">
+				<div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+			</div>
 		</div>
 		<!-- header -->
 		<Header />
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	@font-face {
 		font-family: 'Onest';
-		src: url('/public/onest/Onest-Regular.ttf');
+		src: url('/onest/Onest-Regular.ttf');
 		font-weight: 400;
 	}
 
 	@font-face {
 		font-family: 'Onest';
-		src: url('/public/onest/Onest-Medium.ttf');
+		src: url('/onest/Onest-Medium.ttf');
 		font-weight: 500;
 	}
 
 	@font-face {
 		font-family: 'Onest';
-		src: url('/public/onest/Onest-SemiBold.ttf');
+		src: url('/onest/Onest-SemiBold.ttf');
 		font-weight: 600;
 	}
 	
 	@font-face {
 		font-family: 'Onest';
-		src: url('/public/onest/Onest-Bold.ttf');
+		src: url('/onest/Onest-Bold.ttf');
 		font-weight: 700;
 	}
 
