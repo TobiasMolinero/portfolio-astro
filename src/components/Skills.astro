@@ -1,0 +1,13 @@
+---
+import CardSkill from "./CardSkill.astro"
+import { skills } from "../utils/skils"
+---
+
+<div class="w-full">
+    <h2 class="text-yellow-300 text-3xl sm:text-4xl font-bold">Tecnologías</h2>
+    <div class="flex justify-center gap-10 flex-wrap mt-20"> 
+        {skills.map(skill => (
+            <CardSkill title={skill.title} src={skill.src} alt={skill.alt} />
+        ))}
+    </div>
+</div>
